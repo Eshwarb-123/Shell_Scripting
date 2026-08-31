@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#To calculate time of script run
+#To calculate totial script run time
 
 start_time=$(date +%s)
 
