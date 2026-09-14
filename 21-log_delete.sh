@@ -13,7 +13,7 @@ fi
 
 LOG_FILES_TO_DELETE=$(find /$log_folder -iname "*.txt" -mtime -1)
 
-echo "file to delete $LOG_FILES_TO_DELETE"
+echo "files to delete $LOG_FILES_TO_DELETE"
 
 sleep 5
 
@@ -21,11 +21,11 @@ if [ -z "$LOG_FILES_TO_DELETE" ]; then
    echo "no files to delete"
    exit 0
 else
-	for file in `echo $LOG_FILES_TO_DELETE`
+	for file in $LOG_FILES_TO_DELETE
         do
 	    echo "file to delete $file"
 	    sleep 5
 	    rm -f "$file"
 	    echo "$file deleted"
-	done
+	done 
 fi
