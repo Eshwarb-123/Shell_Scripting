@@ -5,9 +5,9 @@
 
 read -p "Enter any 4  numberes:" A B C D
 
-largest=$A
+largest=0
 
-for i in $B $C $D
+for i in $A $B $C $D
 do
   if [ $i -gt $largest ] 
   then
