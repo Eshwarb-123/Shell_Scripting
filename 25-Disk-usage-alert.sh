@@ -1,8 +1,7 @@
 #!/bin/bash
 
-set -x
 #to identify disk usage and send email alert
-
+set -x
 
 DISK_USAGE=$(df -hT | grep xfs)
 THRESHOLD=80
@@ -22,7 +21,8 @@ echo "message:$MESSAGE"
 
 if [ -n "$MESSAGE" ]
 then
-   echo -e "Disk usage Alert - $TEMSTAMP\n\n$MESSAGE" | mail -s "Disk Usage Alert" eshwarb.111@gmail.com
+#   echo -e "Disk usage Alert - $TIMESTAMP\n\n$MESSAGE" | mail -s "Disk Usage Alert" eshwarb.111@gmail.com
+   echo -e "Disk usage Alert - $TIMESTAMP\n\n$MESSAGE"
 else
    echo "Disk usage is under threshold"
    df -hT

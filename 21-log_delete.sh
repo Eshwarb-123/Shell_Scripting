@@ -19,7 +19,7 @@ sleep 5
 
 if [ -z "$LOG_FILES_TO_DELETE" ]; then
    echo "no files to delete"
-   exit 0
+#   exit 0
 else
 	for file in $LOG_FILES_TO_DELETE
         do
@@ -29,3 +29,9 @@ else
 	    echo "$file deleted"
 	done 
 fi
+
+NAME=$(basename $0)
+
+echo "$NAME"
+
+
