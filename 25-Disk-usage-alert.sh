@@ -5,6 +5,7 @@ set -x
 
 DISK_USAGE=$(df -hT | grep xfs)
 THRESHOLD=80
+SCRIPT_NAME="basename $0"
 
 while read -r line
 do
@@ -27,4 +28,6 @@ else
    echo "Disk usage is under threshold"
    df -hT
 fi
+
+echo "$SCRIPT_NAME"
 
