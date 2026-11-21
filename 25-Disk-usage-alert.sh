@@ -20,6 +20,8 @@ done <<< "$DISK_USAGE"
 TIMESTAMP=$(date '+%F %H;%M;%S')
 echo "message:$MESSAGE"
 
+# send an email on disk usage if morethen threshold value
+
 if [ -n "$MESSAGE" ]
 then
 #   echo -e "Disk usage Alert - $TIMESTAMP\n\n$MESSAGE" | mail -s "Disk Usage Alert" eshwarb.111@gmail.com
